@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="data" id="BYZ-38-t0r" customClass="ViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qk8-Ez-70G">
+                                <rect key="frame" x="76" y="277" width="262" height="40"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="kXy-uT-y2b"/>
+                                </constraints>
+                                <state key="normal" title="Create Chart">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addData" destination="BYZ-38-t0r" eventType="touchUpInside" id="xpt-2S-abN"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1,2.3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="du9-BW-iG4">
+                                <rect key="frame" x="99" y="105" width="239" height="34"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1,2,3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t36-Zv-fun">
+                                <rect key="frame" x="100" y="158" width="238" height="34"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="X:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="57J-rK-cOc">
+                                <rect key="frame" x="75" y="146" width="16" height="59"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozM-Iq-SCk">
+                                <rect key="frame" x="75" y="112" width="15" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mtq-eB-beh">
+                                <rect key="frame" x="75" y="669" width="263" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="xpU-Kk-1mJ"/>
+                                </constraints>
+                                <state key="normal" title="Generate Chart">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="generateData" destination="BYZ-38-t0r" eventType="touchUpInside" id="MuI-MW-fCM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mtq-eB-beh" firstAttribute="trailing" secondItem="qk8-Ez-70G" secondAttribute="trailing" id="0BV-Vo-f1T"/>
+                            <constraint firstItem="qk8-Ez-70G" firstAttribute="top" secondItem="t36-Zv-fun" secondAttribute="bottom" constant="85" id="DK6-Wt-F82"/>
+                            <constraint firstItem="qk8-Ez-70G" firstAttribute="top" secondItem="57J-rK-cOc" secondAttribute="bottom" constant="72" id="JTt-9F-33N"/>
+                            <constraint firstItem="t36-Zv-fun" firstAttribute="leading" secondItem="57J-rK-cOc" secondAttribute="trailing" constant="9" id="JnU-NB-7ZL"/>
+                            <constraint firstItem="qk8-Ez-70G" firstAttribute="leading" secondItem="57J-rK-cOc" secondAttribute="leading" constant="1" id="PI1-vL-GD5"/>
+                            <constraint firstItem="57J-rK-cOc" firstAttribute="top" secondItem="ozM-Iq-SCk" secondAttribute="bottom" constant="13.5" id="Qr7-bX-wdx"/>
+                            <constraint firstItem="ozM-Iq-SCk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="Sxh-JF-FZ6"/>
+                            <constraint firstItem="Mtq-eB-beh" firstAttribute="leading" secondItem="57J-rK-cOc" secondAttribute="leading" id="Vx8-VJ-GqD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="du9-BW-iG4" secondAttribute="trailing" constant="76" id="WTl-Zc-Gf1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mtq-eB-beh" secondAttribute="bottom" constant="153" id="XEN-wX-dZM"/>
+                            <constraint firstItem="qk8-Ez-70G" firstAttribute="trailing" secondItem="t36-Zv-fun" secondAttribute="trailing" id="ce0-6e-VVi"/>
+                            <constraint firstItem="57J-rK-cOc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="dY5-Az-grt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t36-Zv-fun" secondAttribute="trailing" constant="76" id="g5b-oC-hY1"/>
+                            <constraint firstItem="t36-Zv-fun" firstAttribute="top" secondItem="du9-BW-iG4" secondAttribute="bottom" constant="19" id="geQ-qM-I0F"/>
+                            <constraint firstItem="ozM-Iq-SCk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="68" id="hkV-NW-A12"/>
+                            <constraint firstItem="du9-BW-iG4" firstAttribute="leading" secondItem="ozM-Iq-SCk" secondAttribute="trailing" constant="9" id="qGH-Aq-DCu"/>
+                            <constraint firstItem="du9-BW-iG4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="61" id="sAL-V7-KeN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="createBtn" destination="qk8-Ez-70G" id="rAt-dw-xYf"/>
+                        <outlet property="generateBtn" destination="Mtq-eB-beh" id="J5S-vy-SAg"/>
+                        <outlet property="xData" destination="t36-Zv-fun" id="GTb-Hn-ITl"/>
+                        <outlet property="yData" destination="du9-BW-iG4" id="6ao-q5-nfe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="218.84057971014494" y="81.696428571428569"/>
+        </scene>
+        <!--Chart View Controller-->
+        <scene sceneID="j6X-Uq-9KF">
+            <objects>
+                <viewController storyboardIdentifier="chart" wantsFullScreenLayout="YES" id="Rje-D4-DXb" customClass="ChartViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nk2-U3-qQG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfJ-js-mJ4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" red="0.1254952252" green="0.1254850924" blue="0.12549045680000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="T9O-kn-2Ju"/>
+                        <color key="backgroundColor" red="0.1254952252" green="0.1254850924" blue="0.12549045680000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="wfJ-js-mJ4" firstAttribute="leading" secondItem="T9O-kn-2Ju" secondAttribute="leading" id="LYI-bH-NF6"/>
+                            <constraint firstItem="wfJ-js-mJ4" firstAttribute="top" secondItem="T9O-kn-2Ju" secondAttribute="top" id="Vv9-9u-CqM"/>
+                            <constraint firstAttribute="bottom" secondItem="wfJ-js-mJ4" secondAttribute="bottom" constant="34" id="eXH-99-qCM"/>
+                            <constraint firstAttribute="bottom" secondItem="wfJ-js-mJ4" secondAttribute="bottom" constant="34" id="fCp-Oj-InW"/>
+                            <constraint firstItem="wfJ-js-mJ4" firstAttribute="trailing" secondItem="T9O-kn-2Ju" secondAttribute="trailing" id="h9v-YM-3nR"/>
+                            <constraint firstItem="wfJ-js-mJ4" firstAttribute="leading" secondItem="T9O-kn-2Ju" secondAttribute="leading" id="iRp-ny-vjY"/>
+                            <constraint firstItem="wfJ-js-mJ4" firstAttribute="trailing" secondItem="T9O-kn-2Ju" secondAttribute="trailing" id="yQS-U0-JkM"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="chart" destination="wfJ-js-mJ4" id="tum-cy-SQN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="viO-5j-L2F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092.753623188406" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
