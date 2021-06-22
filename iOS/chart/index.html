@@ -1,40 +1,3 @@
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-<!--    <title>Document</title>-->
-<!--    <script type="text/javascript" src="./lcjs.iife.js" ></script>-->
-<!--    <style>-->
-<!--        #inner{-->
-<!--            height: 100vh;-->
-<!--            margin: 0;-->
-<!--            padding: 0-->
-<!--        }-->
-<!--        canvas{-->
-<!--            margin: 0;-->
-<!--            padding: 0-->
-<!--        }-->
-<!--        body{-->
-<!--            overflow-y: hidden;-->
-<!--            margin: 0;-->
-<!--            padding: 0-->
-<!--        }-->
-<!--        -->
-<!--    </style>-->
-<!--</head>-->
-<!--<body>-->
-<!--    <div id="inner"></div>-->
-<!--    <div id="inner2">ffff</div>-->
-<!--    <script type="text/javascript" src="./main.js"></script>-->
-<!--    <script>-->
-<!--       // document.body.style.backgroundColor = `red`-->
-<!--    </script>-->
-<!--</body>-->
-<!--</html>-->
-<!---->
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,21 +49,12 @@
          if(ySet.length && xSet.length){
              const chartData = xSet.map( ( itr1, itr2 ) => ( { x: itr1, y: ySet[itr2] } ) )
              lineSeries.add(chartData)
-         } else {
-             addData()
          }
      }
  
  
-    function addData(){
-        let x = 0
-        var int = setInterval(function(){
-            if(x == 15) clearInterval(int)
-                    const chartData = [{x: x, y: Math.floor(Math.random() * 10)}]
-                    lineSeries.add(chartData)
-                    x++
-        }, 500);
-//        lineSeries.add(chartData)
+    function addData(randomData){
+        lineSeries.add(randomData)
     }
 
     // Extract required parts from LightningChartJS.

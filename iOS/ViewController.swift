@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var yData: UITextField!
     @IBOutlet weak var xData: UITextField!
@@ -18,6 +18,18 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.yData.delegate = self
+        self.xData.delegate = self
+    }
+    
+    // hide keyboard by click 'return'
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return (yData.resignFirstResponder() || xData.resignFirstResponder() )
+    }
+    
+    // hide keyboard by clicking anywhere
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     func alert(msg: String){
@@ -41,7 +53,6 @@ class ViewController: UIViewController {
         let xString = xData.text!.components(separatedBy: CharacterSet.decimalDigits.inverted)
         for item in xString {
             if let arr = Int(item) {
-                print(item)
                 vc.xData.append(arr)
             }
         }
