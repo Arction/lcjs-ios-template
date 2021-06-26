@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController storyboardIdentifier="data" id="BYZ-38-t0r" customClass="ViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qk8-Ez-70G">
-                                <rect key="frame" x="76" y="277" width="262" height="40"/>
+                                <rect key="frame" x="76" y="277" width="276" height="40"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="kXy-uT-y2b"/>
@@ -31,13 +31,13 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1,2.3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="du9-BW-iG4">
-                                <rect key="frame" x="99" y="105" width="239" height="34"/>
+                                <rect key="frame" x="99" y="105" width="253" height="34"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1,2,3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t36-Zv-fun">
-                                <rect key="frame" x="100" y="158" width="238" height="34"/>
+                                <rect key="frame" x="100" y="158" width="252" height="34"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -49,13 +49,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ozM-Iq-SCk">
-                                <rect key="frame" x="75" y="112" width="15" height="20.5"/>
+                                <rect key="frame" x="75" y="112" width="15" height="20.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mtq-eB-beh">
-                                <rect key="frame" x="75" y="669" width="263" height="40"/>
+                                <rect key="frame" x="75" y="699" width="277" height="40"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="xpU-Kk-1mJ"/>
@@ -106,38 +106,60 @@
             <objects>
                 <viewController storyboardIdentifier="chart" wantsFullScreenLayout="YES" id="Rje-D4-DXb" customClass="ChartViewController" customModule="iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nk2-U3-qQG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfJ-js-mJ4">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="74" width="428" height="818"/>
                                 <color key="backgroundColor" red="0.1254952252" green="0.1254850924" blue="0.12549045680000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zC5-OI-BqZ">
+                                <rect key="frame" x="20" y="52" width="60" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="reY-KZ-27w"/>
+                                </constraints>
+                                <color key="tintColor" red="0.1254952252" green="0.1254850924" blue="0.12549045680000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" systemColor="systemYellowColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack:" destination="Rje-D4-DXb" eventType="touchUpInside" id="FFr-ZB-zqN"/>
+                                    <action selector="goBack:" destination="RNj-zU-mzr" eventType="touchUpInside" id="WS5-eC-GFW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T9O-kn-2Ju"/>
                         <color key="backgroundColor" red="0.1254952252" green="0.1254850924" blue="0.12549045680000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="wfJ-js-mJ4" firstAttribute="leading" secondItem="T9O-kn-2Ju" secondAttribute="leading" id="LYI-bH-NF6"/>
-                            <constraint firstItem="wfJ-js-mJ4" firstAttribute="top" secondItem="T9O-kn-2Ju" secondAttribute="top" id="Vv9-9u-CqM"/>
-                            <constraint firstAttribute="bottom" secondItem="wfJ-js-mJ4" secondAttribute="bottom" constant="34" id="eXH-99-qCM"/>
-                            <constraint firstAttribute="bottom" secondItem="wfJ-js-mJ4" secondAttribute="bottom" constant="34" id="fCp-Oj-InW"/>
-                            <constraint firstItem="wfJ-js-mJ4" firstAttribute="trailing" secondItem="T9O-kn-2Ju" secondAttribute="trailing" id="h9v-YM-3nR"/>
-                            <constraint firstItem="wfJ-js-mJ4" firstAttribute="leading" secondItem="T9O-kn-2Ju" secondAttribute="leading" id="iRp-ny-vjY"/>
-                            <constraint firstItem="wfJ-js-mJ4" firstAttribute="trailing" secondItem="T9O-kn-2Ju" secondAttribute="trailing" id="yQS-U0-JkM"/>
+                            <constraint firstItem="wfJ-js-mJ4" firstAttribute="leading" secondItem="T9O-kn-2Ju" secondAttribute="leading" id="3NX-q2-Ovx"/>
+                            <constraint firstAttribute="trailing" secondItem="wfJ-js-mJ4" secondAttribute="trailing" id="3bj-Zk-4kZ"/>
+                            <constraint firstItem="wfJ-js-mJ4" firstAttribute="trailing" secondItem="T9O-kn-2Ju" secondAttribute="trailing" id="Tu1-dX-Owo"/>
+                            <constraint firstItem="wfJ-js-mJ4" firstAttribute="leading" secondItem="nk2-U3-qQG" secondAttribute="leading" id="ZSS-Qq-3GK"/>
+                            <constraint firstItem="wfJ-js-mJ4" firstAttribute="bottom" secondItem="T9O-kn-2Ju" secondAttribute="bottom" id="cbP-nD-fLA"/>
+                            <constraint firstItem="wfJ-js-mJ4" firstAttribute="bottom" secondItem="T9O-kn-2Ju" secondAttribute="bottom" id="h3q-5j-SS5"/>
+                            <constraint firstItem="zC5-OI-BqZ" firstAttribute="top" secondItem="T9O-kn-2Ju" secondAttribute="top" constant="8" id="h6z-6r-SbH"/>
+                            <constraint firstItem="zC5-OI-BqZ" firstAttribute="leading" secondItem="T9O-kn-2Ju" secondAttribute="leading" constant="20" id="hFU-mg-IX0"/>
+                            <constraint firstItem="wfJ-js-mJ4" firstAttribute="top" secondItem="T9O-kn-2Ju" secondAttribute="top" constant="30" id="mfl-N9-IgW"/>
+                            <constraint firstItem="zC5-OI-BqZ" firstAttribute="top" secondItem="T9O-kn-2Ju" secondAttribute="top" constant="8" id="nE9-a1-P5l"/>
+                            <constraint firstItem="T9O-kn-2Ju" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zC5-OI-BqZ" secondAttribute="trailing" symbolic="YES" id="w5J-NP-U8k"/>
                         </constraints>
                     </view>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="chart" destination="wfJ-js-mJ4" id="tum-cy-SQN"/>
+                        <outlet property="goBackBtn" destination="zC5-OI-BqZ" id="ZoK-4R-zo9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="viO-5j-L2F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="RNj-zU-mzr" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1092.753623188406" y="81.696428571428569"/>
+            <point key="canvasLocation" x="1087.5" y="80.281690140845072"/>
         </scene>
     </scenes>
     <resources>
@@ -152,6 +174,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

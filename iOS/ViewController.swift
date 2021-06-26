@@ -18,13 +18,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var createBtn: UIButton!
     // generate random chart btn
     @IBOutlet weak var generateBtn: UIButton!
-
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         self.yData.delegate = self
         self.xData.delegate = self
     }
+    
+//    override var prefersStatusBarHidden: Bool {
+//        return true
+//    }
     
     // hide keyboard by click 'return'
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -40,7 +43,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func alert(msg: String){
         let alert = UIAlertController(title: "Wrong format", message: msg, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .cancel))
-        
         present(alert, animated: true)
     }
 
@@ -69,6 +71,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
         // if no err, create chart, otherwise сall alert
         if (hasErr) {
+            vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true)
         } else {
             alert(msg: "the input should be in format '1,2,3' and length of x-values & y-values must be the same")
@@ -80,6 +83,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func generateData(){
         let vc = storyboard?.instantiateViewController(identifier: "chart") as! ChartViewController
         vc.check = true
+        vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
     }
 

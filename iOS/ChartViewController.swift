@@ -10,9 +10,14 @@ import WebKit
 
 class ChartViewController: UIViewController, WKUIDelegate, UIWebViewDelegate, WKNavigationDelegate {
 
-    @IBOutlet var Back: UIButton!
+    @IBOutlet weak var goBackBtn: UIButton!
     
     @IBOutlet weak var chart: WKWebView!
+    
+    @IBAction func goBack(_ sender: UIButton) {
+        print("ffffff")
+        self.dismiss(animated: true, completion: nil)
+    }
     
     // Y data arr
     public var yData : [Int] = [];
@@ -26,7 +31,7 @@ class ChartViewController: UIViewController, WKUIDelegate, UIWebViewDelegate, WK
     
     // load HTML when ViewController(VC) start loading
     override func viewWillAppear(_ animated: Bool) {
-        if let url = Bundle.main.url(forResource: "index", withExtension: "html", subdirectory: "chart") {
+        if let url = Bundle.main.url(forResource: "index", withExtension: "html", subdirectory: "assets") {
             chart.loadFileURL(url, allowingReadAccessTo: url)
             let request = URLRequest(url: url)
             chart.load(request)
@@ -36,8 +41,13 @@ class ChartViewController: UIViewController, WKUIDelegate, UIWebViewDelegate, WK
     
     // remove timer by closing VC
     override func viewWillDisappear(_ animated: Bool) {
+        print("closed")
         timer.invalidate()
         count = 0
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
     // load HTML
@@ -46,7 +56,7 @@ class ChartViewController: UIViewController, WKUIDelegate, UIWebViewDelegate, WK
         // chart with X/Y data
         if (!check && (self.yData.count != 0 || self.xData.count != 0  ) )  {
             chart.evaluateJavaScript("setData(\(self.yData), \((self.xData)));") { (any, error) in
-                print("Error : \(String(describing: error))")
+                if((error) != nil){ print("Error : \(String(describing: error))")}
             }
         // rnd chart timer
         }else {
@@ -57,9 +67,8 @@ class ChartViewController: UIViewController, WKUIDelegate, UIWebViewDelegate, WK
     // RandomChart
     @objc func createRandomChart() {
         let randomNumber = Int.random(in: 1...20)
-        print(randomNumber)
         chart.evaluateJavaScript("addData({x:\(count),y:\(randomNumber) });") { (any, error) in
-            print("Error : \(String(describing: error))")
+            if((error) != nil){ print("Error : \(String(describing: error))")}
         }
         count += 1
         if count == 20 {
@@ -70,8 +79,7 @@ class ChartViewController: UIViewController, WKUIDelegate, UIWebViewDelegate, WK
     // print data when VC has loaded
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("done")
-        print(yData)
-        print(xData)
+        goBackBtn.layer.cornerRadius = 4
+        print("success")
     }
 }

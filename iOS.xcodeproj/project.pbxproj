@@ -16,7 +16,7 @@
 		11FE292026663CB8009166DD /* iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE291F26663CB8009166DD /* iOSTests.swift */; };
 		11FE292B26663CB8009166DD /* iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE292A26663CB8009166DD /* iOSUITests.swift */; };
 		11FE293926665146009166DD /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE293826665146009166DD /* ChartViewController.swift */; };
-		11FE293B2666D809009166DD /* chart in Resources */ = {isa = PBXBuildFile; fileRef = 11FE293A2666D808009166DD /* chart */; };
+		11FE293B2666D809009166DD /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 11FE293A2666D808009166DD /* assets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +52,7 @@
 		11FE292A26663CB8009166DD /* iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSUITests.swift; sourceTree = "<group>"; };
 		11FE292C26663CB8009166DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11FE293826665146009166DD /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
-		11FE293A2666D808009166DD /* chart */ = {isa = PBXFileReference; lastKnownFileType = folder; path = chart; sourceTree = "<group>"; };
+		11FE293A2666D808009166DD /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 				11FE290A26663CB5009166DD /* SceneDelegate.swift */,
 				11FE290C26663CB5009166DD /* ViewController.swift */,
 				11FE293826665146009166DD /* ChartViewController.swift */,
-				11FE293A2666D808009166DD /* chart */,
+				11FE293A2666D808009166DD /* assets */,
 				11FE290E26663CB5009166DD /* Main.storyboard */,
 				11FE291126663CB8009166DD /* Assets.xcassets */,
 				11FE291326663CB8009166DD /* LaunchScreen.storyboard */,
@@ -240,7 +240,7 @@
 				11FE291526663CB8009166DD /* LaunchScreen.storyboard in Resources */,
 				11FE291226663CB8009166DD /* Assets.xcassets in Resources */,
 				11FE291026663CB5009166DD /* Main.storyboard in Resources */,
-				11FE293B2666D809009166DD /* chart in Resources */,
+				11FE293B2666D809009166DD /* assets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
